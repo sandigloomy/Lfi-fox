@@ -2,6 +2,7 @@
 <img src="https://i.imgur.com/glFl6DX.png"></img>
 
 ### Written by sandi
+<a href="https://t.me/sanfox"> Telegram </a>
 
 ### Installation with requirements.txt
 
