@@ -1,13 +1,13 @@
 # Lfi-fox
 <img src="https://i.imgur.com/glFl6DX.png"></img>
 
-### Written by SANDI
+### Written by sandi
 
 ### Installation with requirements.txt
 
 ```bash
-git clone https://github.com/capture0x/Lfi-fox/
-cd Lfi-Space
+git clone https://github.com/sandiskyy/Lfi-fox/
+cd Lfi-fox
 pip3 install -r requirements.txt
 ```
 
