@@ -1,5 +1,5 @@
 # Lfi-fox
-<img src="https://i.imgur.com/RMzIWFT.png" width="70%"></img>
+<img src="https://i.imgur.com/glFl6DX.png" width="70%"></img>
 
 #### Written by SANDI
 
