@@ -1,12 +1,7 @@
 # Lfi-fox
 <img src="https://i.imgur.com/glFl6DX.png"></img>
 
-#### Written by SANDI
-
-## Dork
-```
-dork.txt
-```
+### Written by SANDI
 
 ### Installation with requirements.txt
 
