@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import unquote
 from colorama import Fore, Style
 import time
-import fox
+import lib.fox
 import urllib
 
 class LFIScanner:
@@ -18,7 +18,7 @@ class LFIScanner:
 
     def google_lfi(self, num_results: int):
         search_engine = "https://www.google.com/search"
-        with open("dork.txt", "r") as f:
+        with open("db/dork.txt", "r") as f:
             dorks = f.readlines()
         for dork in dorks:
             dork = dork.strip()
@@ -48,12 +48,12 @@ class LFIScanner:
                                 + Style.BRIGHT + f"{target_url}" + Style.RESET_ALL)
                             with open("FoxVuln.txt", "a") as f:
                                 f.write(f"{target_url}\n")
-                                print(Fore.MAGENTA + Style.BRIGHT + "Vulnerability Urls saved in FoxVuln.txt file...")
+                                print(Fore.MAGENTA + "Vulnerability Urls saved in FoxVuln.txt file")
                         else:
                             print(
-                                Fore.BLUE + Style.BRIGHT + "[-] " + Fore.GREEN + Style.BRIGHT + f"{target_url}" + Fore.YELLOW + " is not vulnerable to LFI")
+                                Fore.BLUE + "[-] " + Fore.GREEN + f"{target_url}" + Fore.YELLOW + " is not vulnerable to LFI")
                     except requests.exceptions.RequestException as e:
-                        print(Fore.RED + Style.BRIGHT + "[!] Request exception: %s" % e)
+                        print(Fore.RED + "[!] Request exception: %s" % e)
                         continue
 
     def check_lfi(self, url):
@@ -61,18 +61,18 @@ class LFIScanner:
             try:
                 r = requests.get(url + payload, timeout=5)
                 if "root:x" in r.text:
-                    print(Fore.RED + Style.BRIGHT + "[+] " + Fore.GREEN + Style.BRIGHT + f"LFI vulnerability found at {url}{payload}")
+                    print(Fore.RED + "[+] " + Fore.GREEN + f"LFI vulnerability found at {url}{payload}")
                 else:
-                    print(Fore.BLUE + Style.BRIGHT + "[-]" + Fore.GREEN + Style.BRIGHT + f"LFI is not found at {url}{payload}")
+                    print(Fore.BLUE + "[-]" + Fore.GREEN + f"LFI is not found at {url}{payload}")
             except requests.exceptions.RequestException as e:
-                print(Fore.RED + Style.BRIGHT + "[!] Request exception: %s" % e)
+                print(Fore.RED + "[!] Request exception: %s" % e)
         return False
 
     def run(self):
         while True:
-            a = input(Fore.WHITE + "\t1.Scan Wit Dork \n" + Fore.BLUE + "\t2."
+            a = input(Fore.WHITE + "1.Scan Wit Dork \n" + Fore.BLUE + "2."
 
-                      "Target Url \n" + Fore.MAGENTA + "\t0.Quit\n" + Fore.CYAN + Style.BRIGHT + "\tFox : ")
+                      "Target Url \n" + Fore.MAGENTA + "0.Quit\n" + Fore.CYAN + Style.BRIGHT+ "Fox : ")
             if a == "1":
                 take_number = input("\nEnter "
                                     "The "
@@ -81,28 +81,28 @@ class LFIScanner:
                                     "Search "
                                     "Results: ")
                 self.google_lfi(take_number)
-                print(Fore.GREEN + Style.BRIGHT + "Search finished.")
+                print(Fore.GREEN + "Search finished.")
             elif a == "2":
                 try:
-                    url_list_path = input(Fore.CYAN + Style.BRIGHT + "Enter the URL list file path: ")
+                    url_list_path = input(Fore.CYAN + "Wordlist Url : ")
                     with open(url_list_path, 'r') as f:
                         urls = f.readlines()
                     for url in urls:
                         url = url.strip()
                         if self.check_lfi(url):
-                            print(Fore.GREEN + Style.BRIGHT + f"LFI vulnerability found at {url}")
+                            print(Fore.GREEN + f"LFI vulnerability found at {url}")
                         else:
-                            print(Fore.BLUE + Style.BRIGHT + f"LFI is not found at {url}")
-                    print(Fore.GREEN + Style.BRIGHT + "Search finished.")
+                            print(Fore.BLUE + f"LFI is not found at {url}")
+                    print(Fore.GREEN + "Search finished.")
                 except Exception as e:
-                    print(Fore.RED + Style.BRIGHT + f"Error: {e}")
+                    print(Fore.RED + f"Error: {e}")
                     continue
             elif a == "0":
-                print(Fore.CYAN + Style.BRIGHT + "Quitting...")
+                print(Fore.CYAN + "Quitting...")
                 break
             else:
-                print(Fore.RED + Style.BRIGHT + "Please Choose 1 or 2 !?")
-                input(Fore.YELLOW + Style.BRIGHT + "Press enter to continue...")
+                print(Fore.RED + "Please Choose 1 or 2 !?")
+                input(Fore.YELLOW + "Press enter to continue...")
 
 if __name__ == "__main__":
     scanner = LFIScanner()
