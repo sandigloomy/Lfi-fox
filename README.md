@@ -7,6 +7,7 @@
 add bing engine
 changed theme
 separate payloads file
+Fixed Code
 ```
 
 ### Installation with requirements.txt
