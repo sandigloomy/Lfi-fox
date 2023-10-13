@@ -14,6 +14,11 @@
   </p>
 </div>
 
+## Google Dork
+Automatically search for vulnerabilities using google dork
+
+/db/dorks.txt
+
 ## Installation
 
 ```bash
