@@ -3,9 +3,11 @@
 <a href="https://t.me/sanfox"> Telegram </a>
 # Update
 
+```bash
 add bing engine
 changed theme
 separate payloads file
+```
 
 ### Installation with requirements.txt
 
