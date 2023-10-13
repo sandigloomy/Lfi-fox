@@ -15,6 +15,7 @@
 </div>
 
 # Installation
+1.Clone the repo
 ```bash
-
+https://github.com/sandiskyy/Lfi-fox.git
 ```
