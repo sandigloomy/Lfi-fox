@@ -14,8 +14,16 @@
   </p>
 </div>
 
-# Installation
-1.Clone the repo
+## Installation
+
 ```bash
 https://github.com/sandiskyy/Lfi-fox.git
+cd Lfi-fox
+pip3 install -r requirements.txt
 ```
+
+## Usage
+```bash
+python3 lfi
+```
+
