@@ -4,34 +4,44 @@ import random
 from colorama import Fore, Style
 
 
-class colors:
-    OKBLUE = '\033[94m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
+class Colors:
+    OKBLUE = Fore.BLUE
+    WARNING = Fore.YELLOW
+    FAIL = Fore.RED
+    ENDC = Style.RESET_ALL
+    BOLD = Style.BRIGHT
     UNDERLINE = '\033[4m'
-    CBLACK = '\33[30m'
-    CRED = '\33[31m'
-    CGREEN = '\33[32m'
-    CYELLOW = '\33[33m'
-    CBLUE = '\33[34m'
-    CVIOLET = '\33[35m'
-    CBEIGE = '\33[36m'
-    CWHITE = '\33[37m'
+    CBLACK = Fore.BLACK
+    CRED = Fore.RED
+    CGREEN = Fore.GREEN
+    CYELLOW = Fore.YELLOW
+    CBLUE = Fore.BLUE
+    CVIOLET = Fore.MAGENTA
+    CBEIGE = Fore.CYAN
+    CWHITE = Fore.WHITE
 
+COLORS_RANDOM = [Colors.CBLUE, Colors.CVIOLET, Colors.CWHITE, Colors.OKBLUE, Colors.CGREEN, Colors.WARNING,
+                Colors.CRED, Colors.CBEIGE]
+random.shuffle(COLORS_RANDOM)
 
-color_random = [colors.CBLUE, colors.CVIOLET, colors.CWHITE, colors.OKBLUE, colors.CGREEN, colors.WARNING,
-                colors.CRED, colors.CBEIGE]
-random.shuffle(color_random)
+foxx = """The LFI scanner is a tool 
+designed to identify potential Local File Inclusion
+vulnerabilities in web applications.\n""" 
 
-
-
-print("""
+ASCII_ART = """
                                       
-        ___  __               ___   
-        |__  /  \ \_/    |    |__  | 
-        |    \__/ / \    |___ |    | 
-        
-                By Purple Fox                                                                
-""")
+ ___   __           
+ |__  /  \\ \\_/ LFI 🦊     
+ |    \\__/ / \\     
+ 
+ By Purple Fox
+                                                           
+"""
+def fxpurple(text, color):
+    print(f"{color}{text}{Colors.ENDC}")
+
+def fox():
+    fxpurple(ASCII_ART, random.choice(COLORS_RANDOM))
+    print(foxx)
+
+
