@@ -20,6 +20,12 @@ Automatically search for vulnerabilities using google dork
 ```bash
 /db/dorks.txt
 ```
+## Payloads
+This uses separate payloads, if you want to add a custom payload, go to:
+
+```bash
+/db/payloads.txt
+```
 ### Dork
 
 ```bash
