@@ -17,8 +17,17 @@
 ## Google Dork
 Automatically search for vulnerabilities using google dork
 
+```bash
 /db/dorks.txt
+```
+### Dork
 
+```bash
+inurl:/squirrelcart/cart_content.php?cart_isp_root=
+inurl:index2.php?to=
+inurl:index.php?load=
+inurl:home.php?pagina=
+```
 ## Installation
 
 ```bash
