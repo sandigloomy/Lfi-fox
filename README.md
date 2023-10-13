@@ -1,8 +1,11 @@
 # Lfi-fox
 <img src="https://i.imgur.com/glFl6DX.png"></img>
-
-### Written by sandi
 <a href="https://t.me/sanfox"> Telegram </a>
+# Update
+
+add bing engine
+changed theme
+separate payloads file
 
 ### Installation with requirements.txt
 
