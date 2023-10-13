@@ -24,6 +24,6 @@ pip3 install -r requirements.txt
 
 ## Usage
 ```bash
-python3 lfi
+python3 Lfi-fox.py
 ```
 
