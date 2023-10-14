@@ -48,7 +48,11 @@ inurl:home.php?pagina=
 
 ```bash
 https://github.com/sandiskyy/Lfi-fox.git
+```
+```bash
 cd Lfi-fox
+```
+```bash
 pip3 install -r requirements.txt
 ```
 
