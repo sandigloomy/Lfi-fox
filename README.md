@@ -7,7 +7,7 @@
     <img src="https://i.imgur.com/PlZ6PEH.png" alt="Logo">
   </a>
 
-  <h3 align="center">FOX LFI SCANNER AUTOMATIC</h3>
+  <h3 align="center">FOX LFI AUTOMATIC TOOLS🦊</h3>
 
   <p align="center">
     The FOX LFI Scanner is a powerful tool designed for scanning Local File Inclusion vulnerabilities.
