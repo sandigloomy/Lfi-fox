@@ -46,11 +46,14 @@ inurl:home.php?pagina=
 ```
 ## Installation
 
+Clone 
 ```bash
-https://github.com/sandiskyy/Lfi-fox.git
-
+git clone https://github.com/sandiskyy/Lfi-fox.git
+```
+```bash
 cd Lfi-fox
-
+```
+```bash
 pip3 install -r requirements.txt
 ```
 
