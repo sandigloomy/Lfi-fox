@@ -55,11 +55,11 @@ class BingSearch(SearchEngine):
 class LFIscanner:
     def __init__(self):
         # Read LFI payloads from file
-        with open("db/payloads.txt", "r") as f:
+        with open("payloads.txt", "r") as f:
             self.lfi_payloads = [line.strip() for line in f]
 
         # Read dorks from file
-        with open("db/dorks.txt", "r") as f:
+        with open("dorks.txt", "r") as f:
             self.dorks = [line.strip() for line in f]
 
     def check_for_lfi_vulnerability(self, target_url):
