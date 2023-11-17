@@ -24,7 +24,7 @@ Automatically search for vulnerabilities using google dork
 This uses separate payloads, if you want to add a custom payload, go to:
 
 ```bash
-/db/payloads.txt
+payloads.txt
 ```
 
 Default payloads:
